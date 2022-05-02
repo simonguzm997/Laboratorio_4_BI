@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "4f310a8b-bbf0-40e9-8e2b-bb4e11b527ec",
+		"name": "PipelineTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Escenario1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Escenario correcto\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":[{   \r\n        \"adult_mortality\": 189,\r\n        \"infant_deaths\": 0,\r\n        \"alcohol\": 6.12,\r\n        \"percentage_expenditure\": 1184.946,\r\n        \"hepatitis_B\": 95,\r\n        \"measles\": 0,\r\n        \"bmi\": 36.8,\r\n        \"under_five_deaths\": 0,\r\n        \"polio\": 95,\r\n        \"total_expenditure\": 5.31,\r\n        \"diphtheria\": 95,\r\n        \"hiv_aids\": 5.3,\r\n        \"gdp\": 12187.13,\r\n        \"population\": 125678,\r\n        \"thinness_10_19_years\": 6.3,\r\n        \"thinness_5_9_years\": 6.7,\r\n        \"income_composition_of_resources\": 0.467,\r\n        \"schooling\": 12.3\r\n    }]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/predict",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Escenario2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Escenario correcto\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": [\r\n\t{\r\n  \t\"adult_mortality\": -9910,\r\n  \t\"infant_deaths\": -110,\r\n  \t\"alcohol\": -100,\r\n  \t\"percentage_expenditure\": -10990,\r\n  \t\"hepatitis_B\": -110,\r\n  \t\"measles\": -100,\r\n  \t\"bmi\": -100,\r\n  \t\"under_five_deaths\": -19900,\r\n  \t\"polio\": -100,\r\n  \t\"total_expenditure\": -100,\r\n  \t\"diphtheria\": -100,\r\n  \t\"hiv_aids\": -100,\r\n  \t\"gdp\": -100,\r\n  \t\"population\": 0,\r\n  \t\"thinness_10_19_years\": 0,\r\n  \t\"thinness_5_9_years\": 0,\r\n  \t\"income_composition_of_resources\": 0,\r\n  \t\"schooling\": 0\r\n\t}\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/predict",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Escenario3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Escenario correcto\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n\t\"data\": [\r\n  \t{\r\n    \t\"adult_mortality\": 149.0,\r\n    \t\"infant_deaths\": 0.0,\r\n    \t\"alcohol\": 2.1,\r\n    \t\"percentage_expenditure\": 738.7432,\r\n    \t\"hepatitis_B\": 1.0,\r\n    \t\"measles\": 0,\r\n    \t\"bmi\": 56.6,\r\n    \t\"under_five_deaths\": 0.0,\r\n    \t\"polio\": 89.0,\r\n    \t\"total_expenditure\": 54.57,\r\n    \t\"diphtheria\": 8.0,\r\n    \t\"hiv_aids\": 0.5,\r\n    \t\"gdp\": 432.442,\r\n    \t\"population\": 234.0,\r\n    \t\"thinness_10_19_years\": 1.1,\r\n    \t\"thinness_5_9_years\": 1.1,\r\n    \t\"income_composition_of_resources\": 424,\r\n    \t\"schooling\": 12.6\r\n  \t},\r\n  \t{\r\n    \t\"adult_mortality\": 155.0,\r\n    \t\"infant_deaths\": 0,\r\n    \t\"alcohol\": 1.5,\r\n    \t\"percentage_expenditure\": 65.6655,\r\n    \t\"hepatitis_B\": 87.0,\r\n    \t\"measles\": 0.0,\r\n    \t\"bmi\": 35.8,\r\n    \t\"under_five_deaths\": 0.0,\r\n    \t\"polio\": 91.0,\r\n    \t\"total_expenditure\": 3.9,\r\n    \t\"diphtheria\": 10.0,\r\n    \t\"hiv_aids\": 0.3,\r\n    \t\"gdp\": 443.341,\r\n    \t\"population\": 424.0,\r\n    \t\"thinness_10_19_years\": 0.3,\r\n    \t\"thinness_5_9_years\": 0.4,\r\n    \t\"income_composition_of_resources\": 435,\r\n    \t\"schooling\": 15.3\r\n  \t}\r\n\t]\r\n  },\r\n  \"dataTrue\": {\r\n\t\"dataTrue\": [\r\n  \t{\r\n    \t\"life_expectancy\": 75.99\r\n  \t},\r\n  \t{\r\n    \t\"life_expectancy\": 73.56\r\n  \t}\r\n\t]\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/r2_model",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"r2_model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Escenario4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Escenario correcto\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"data\": [\r\n      {\r\n        \"adult_mortality\": 151,\r\n        \"infant_deaths\": 0.0,\r\n        \"alcohol\": 1.8,\r\n        \"percentage_expenditure\": 423.2953509,\r\n        \"hepatitis_B\": 9.0,\r\n        \"measles\": 0,\r\n        \"bmi\": 68.6,\r\n        \"under_five_deaths\": 0.0,\r\n        \"polio\": 91.0,\r\n        \"total_expenditure\": 4.87,\r\n        \"diphtheria\": 9.0,\r\n        \"hiv_aids\": 0.1,\r\n        \"gdp\": 2284.37858,\r\n        \"population\": 146.0,\r\n        \"thinness_10_19_years\": 0.1,\r\n        \"thinness_5_9_years\": 0.1,\r\n        \"income_composition_of_resources\": 693,\r\n        \"schooling\": 14.6\r\n      },\r\n      {\r\n        \"adult_mortality\": 116.0,\r\n        \"infant_deaths\": 1,\r\n        \"alcohol\": 1.29,\r\n        \"percentage_expenditure\": 20.85105771,\r\n        \"hepatitis_B\": 56.0,\r\n        \"measles\": 0.0,\r\n        \"bmi\": 59.8,\r\n        \"under_five_deaths\": 0.0,\r\n        \"polio\": 56.0,\r\n        \"total_expenditure\": 5.3,\r\n        \"diphtheria\": 2.0,\r\n        \"hiv_aids\": 0.1,\r\n        \"gdp\": 222.714718,\r\n        \"population\": 109789.0,\r\n        \"thinness_10_19_years\": 0.1,\r\n        \"thinness_5_9_years\": 0.1,\r\n        \"income_composition_of_resources\": 683,\r\n        \"schooling\": 13.7\r\n      }\r\n    ]\r\n  },\r\n  \"dataTrue\": {\r\n    \"dataTrue\": [\r\n      {\r\n        \"life_expectancy\": 73.96\r\n      },\r\n      {\r\n        \"life_expectancy\": 72.34\r\n      }\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/r2_model",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"r2_model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Escenario5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Escenario correcto\"] = responseCode.code === 200;\r",
+							"tests[\"Escenario no procesable\"] = responseCode.code === 422;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"data\": [\r\n      {\r\n        \"adult_mortality\": null,\r\n        \"infant_deaths\": 0.0,\r\n        \"alcohol\": 1.8,\r\n        \"percentage_expenditure\": 423.2953509,\r\n        \"hepatitis_B\": 9.0,\r\n        \"measles\": 0,\r\n        \"bmi\": 68.6,\r\n        \"under_five_deaths\": 0.0,\r\n        \"polio\": 91.0,\r\n        \"total_expenditure\": 4.87,\r\n        \"diphtheria\": 9.0,\r\n        \"hiv_aids\": 0.1,\r\n        \"gdp\": 2284.37858,\r\n        \"population\": 146.0,\r\n        \"thinness_10_19_years\": 0.1,\r\n        \"thinness_5_9_years\": 0.1,\r\n        \"income_composition_of_resources\": 693,\r\n        \"schooling\": 14.6\r\n      },\r\n      {\r\n        \"adult_mortality\": 116.0,\r\n        \"infant_deaths\": 1,\r\n        \"alcohol\": 1.29,\r\n        \"percentage_expenditure\": 20.85105771,\r\n        \"hepatitis_B\": 56.0,\r\n        \"measles\": 0.0,\r\n        \"bmi\": 59.8,\r\n        \"under_five_deaths\": 0.0,\r\n        \"polio\": 56.0,\r\n        \"total_expenditure\": 5.3,\r\n        \"diphtheria\": 2.0,\r\n        \"hiv_aids\": 0.1,\r\n        \"gdp\": 222.714718,\r\n        \"population\": 109789.0,\r\n        \"thinness_10_19_years\": 0.1,\r\n        \"thinness_5_9_years\": 0.1,\r\n        \"income_composition_of_resources\": 683,\r\n        \"schooling\": 13.7\r\n      }\r\n    ]\r\n  },\r\n  \"dataTrue\": {\r\n    \"dataTrue\": [\r\n      {\r\n        \"life_expectancy\": 73.96\r\n      },\r\n      {\r\n        \"life_expectancy\": 72.34\r\n      }\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/r2_model",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"r2_model"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
